@@ -3,6 +3,7 @@
     <div class="row mb-3">
       <div class="col-md">
         <AddTodo />
+        <todo-filter />
       </div>
     </div>
     <div class="row">
@@ -28,9 +29,10 @@
 <script>
 import { mapActions, mapGetters } from "vuex";
 import AddTodo from "./AddTodo.vue";
+import TodoFilter from "./TodoFilter.vue";
 
 export default {
-  components: { AddTodo },
+  components: { AddTodo, TodoFilter },
   computed: mapGetters(["myTodos"]),
   methods: mapActions(["getTodos", "deleteTodo"]),
   mounted() {
